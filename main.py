@@ -1,6 +1,6 @@
 import random 
-#from art import logo 
-#from replit import clear
+from art import logo 
+from replit import clear
 
 #print(logo)
 
@@ -40,23 +40,23 @@ print(calculate_score(user_cards))
 run = True
 while run:
   if calculate_score(user_cards) == 0 or calculate_score(user_cards) == 21:
-  #  clear()
-  #  print(logo)
+    clear()
+    print(logo)
     print(f"Congratulations you have won with {calculate_score(user_cards)} points")
     run = False
   elif calculate_score(user_cards) < 21:
     next_card = input("Do you want to draw another card? Type 'yes' or 'no'")
     if next_card == "yes":
       user_cards.append(deal_card())
-    #  clear()
-    #  print(logo)
+      clear()
+      print(logo)
       print(user_cards)
       print(calculate_score(user_cards))
     elif next_card == "no":
       run = False 
   elif calculate_score(user_cards) > 21:
-  #  clear()
-  #  print(logo)
+    clear()
+    print(logo)
     print(user_cards)
     print("You have lost")
     run = False
@@ -77,7 +77,7 @@ while run_comp:
 user = calculate_score(user_cards)
 computer = calculate_score(computer_cards)
 
-#clear()
+clear()
 #print(logo)
 print(user_cards)
 print(f"User score is: {user}")
